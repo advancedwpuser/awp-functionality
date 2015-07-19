@@ -1,0 +1,14 @@
+{
+  "name": "advancedwp/awp-functionality",
+  "type": "wordpress-plugin",
+  "license": "GPLv2",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/advancedwp/awp-functionality"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0"
+  }
+}
