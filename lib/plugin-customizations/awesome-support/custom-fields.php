@@ -23,9 +23,10 @@
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
-
-add_action( 'plugins_loaded', 'awp_as_custom_fields1' );
-add_action( 'plugins_loaded', 'awp_as_custom_fields2' );
+if ( class_exists( 'Awesome_Support' ) ) {
+	add_action( 'plugins_loaded', 'awp_as_custom_fields1' );
+	add_action( 'plugins_loaded', 'awp_as_custom_fields2' );
+}
 /**
  * Register all custom fields after the plugin is safely loaded.
  */
