@@ -42,7 +42,7 @@ function awp_as_custom_fields() {
 	);
 
 	wpas_add_custom_field(
-		'awp_product_url', array(
+		'product_url', array(
 			'title'       => __( 'Product URL' ),
 			'callback'    => 'text',
 			'label'       => __( 'Product URL' ),
