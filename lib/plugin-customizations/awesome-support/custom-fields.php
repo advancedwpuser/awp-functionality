@@ -23,33 +23,31 @@
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
+
 if ( class_exists( 'Awesome_Support' ) ) {
-	add_action( 'plugins_loaded', 'awp_as_custom_fields1' );
-	add_action( 'plugins_loaded', 'awp_as_custom_fields2' );
+	add_action( 'plugins_loaded', 'awp_as_custom_fields' );
 }
+
 /**
  * Register all custom fields after the plugin is safely loaded.
  */
-function awp_as_custom_fields1() {
-/* You can start adding your custom fields safely after this line */
+function awp_as_custom_fields() {
 
-wpas_add_custom_field(
-    'product_name',  array(
-      'title' => __( 'Name of Your Plugin/Theme' ),
-      'callback' => 'text',
-      'label' => __( 'Name of Your Plugin/Theme' )
-    )
-);
-}
+	wpas_add_custom_field(
+		'product_name', array(
+			'title'    => __( 'Name of Your Plugin/Theme' ),
+			'callback' => 'text',
+			'label'    => __( 'Name of Your Plugin/Theme' )
+		)
+	);
 
-function awp_as_custom_fields2() {
-  wpas_add_custom_field(
-    'awp_product_url',  array(
-      'title' => __( 'Product URL' ),
-      'callback' => 'text',
-      'label' => __( 'Product URL' ),
-      'placeholder' => 'https://github.com/username/product-name',
-    )
-  );
-/* Do NOT write anything after this line */
+	wpas_add_custom_field(
+		'awp_product_url', array(
+			'title'       => __( 'Product URL' ),
+			'callback'    => 'text',
+			'label'       => __( 'Product URL' ),
+			'placeholder' => 'https://github.com/username/product-name',
+		)
+	);
+
 }
