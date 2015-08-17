@@ -28,3 +28,12 @@ define( 'AWP_DIR', dirname( __FILE__ ) );
 
 // Plugin Customizations
 include_once( AWP_DIR . '/lib/plugin-customizations/all.php' );
+
+// Custom Post Types
+include_once( AWP_DIR . '/lib/custom-post-types.php' );
+
+// Custom Functions
+include_once( AWP_DIR . '/lib/custom-functions.php' );
+
+// Custom Functions
+include_once( AWP_DIR . '/lib/custom-taxonomies.php' );
